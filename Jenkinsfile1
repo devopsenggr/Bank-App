@@ -54,14 +54,14 @@ pipeline {
                   }
         } 
         
-        stage('publishArtifactoryToNexus') {
-            steps {
-                withMaven(globalMavenSettingsConfig: 'maven-settings', jdk: 'jdk17', maven: 'maven3', mavenSettingsConfig: '', traceability: true) {
-                        sh "mvn deploy"
-                }
+      //  stage('publishArtifactoryToNexus') {
+        //    steps {
+          //      withMaven(globalMavenSettingsConfig: 'maven-settings', jdk: 'jdk17', maven: 'maven3', mavenSettingsConfig: '', traceability: true) {
+            //            sh "mvn deploy"
+              //  }
                 
-            }
-        }
+            //}
+        //}
         
         stage('Docker BuildTag and push') {
             steps {
